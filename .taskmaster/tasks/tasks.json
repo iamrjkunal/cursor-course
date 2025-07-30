@@ -1,0 +1,213 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": 1,
+        "title": "Setup Project Repository",
+        "description": "Initialize a new Git repository for the project and set up basic configuration files.",
+        "details": "Create a new directory for the project, initialize Git using `git init`, create a `.gitignore` file to exclude unnecessary files, and add initial README.md with project details.",
+        "testStrategy": "Verify that the repository is initialized correctly by running `git status` and checking the contents of the `.gitignore` file.",
+        "priority": "high",
+        "dependencies": [],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 2,
+        "title": "Install Dependencies",
+        "description": "Set up the development environment by installing necessary dependencies.",
+        "details": "Create a `package.json` file using `npm init -y`, install NextJS, TailwindCSS, ShadUI, and Supabase packages. Configure TailwindCSS with the App Directory structure.",
+        "testStrategy": "Run `npm install` to ensure all dependencies are installed correctly. Verify that the project builds successfully by running `npm run dev`.",
+        "priority": "high",
+        "dependencies": [1],
+        "status": "done",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Create package.json file",
+            "description": "Initialize the project by creating a `package.json` file using `npm init -y`.",
+            "dependencies": [],
+            "details": "Run `npm init -y` in the terminal to create the package.json file with default settings.",
+            "status": "done",
+            "testStrategy": "Check if the package.json file is created and contains necessary fields like name, version, dependencies, etc."
+          },
+          {
+            "id": 2,
+            "title": "Install NextJS",
+            "description": "Install NextJS using npm to set up the React application framework.",
+            "dependencies": ["2.1"],
+            "details": "Run `npm install next` in the terminal to install NextJS and its dependencies.",
+            "status": "done",
+            "testStrategy": "Verify that NextJS is installed by checking the node_modules directory for the 'next' package."
+          },
+          {
+            "id": 3,
+            "title": "Install TailwindCSS",
+            "description": "Set up TailwindCSS with the App Directory structure in a NextJS project.",
+            "dependencies": ["2.2"],
+            "details": "Run `npm install tailwindcss@latest postcss@latest autoprefixer@latest` and follow the official TailwindCSS documentation to configure it for an App Directory setup.",
+            "status": "done",
+            "testStrategy": "Check if TailwindCSS is properly configured by verifying the presence of necessary configuration files (tailwind.config.js, postcss.config.js) and ensuring they are correctly set up."
+          },
+          {
+            "id": 4,
+            "title": "Install ShadUI",
+            "description": "Add ShadUI to the project for reusable UI components.",
+            "dependencies": ["2.3"],
+            "details": "Run `npm install @shadcn/ui` in the terminal to install ShadUI and its dependencies.",
+            "status": "done",
+            "testStrategy": "Verify that ShadUI is installed by checking the node_modules directory for the '@shadcn/ui' package."
+          },
+          {
+            "id": 5,
+            "title": "Install Supabase packages",
+            "description": "Set up Supabase in the project using npm.",
+            "dependencies": ["2.4"],
+            "details": "Run `npm install @supabase/supabase-js` to install the Supabase client library.",
+            "status": "done",
+            "testStrategy": "Check if Supabase is installed by verifying the presence of the 'supabase-js' package in the node_modules directory."
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Create Basic UI Layout",
+        "description": "Design and implement a clean, minimal interface with focus on content.",
+        "details": "Create React components for the chat interface, user input area, and mode toggle. Use TailwindCSS for styling and ShadUI for reusable components.",
+        "testStrategy": "Run the development server using `npm run dev` and visually inspect the UI to ensure it meets the requirements.",
+        "priority": "high",
+        "dependencies": [2],
+        "status": "done",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Set up React Component Structure",
+            "description": "Create the basic structure of the chat interface components.",
+            "dependencies": [],
+            "details": "Establish the core React components for the chat interface, user input area, and mode toggle.",
+            "status": "done",
+            "testStrategy": ""
+          },
+          {
+            "id": 2,
+            "title": "Implement Basic Layout with TailwindCSS",
+            "description": "Design the layout using TailwindCSS to ensure a clean and minimal design.",
+            "dependencies": [],
+            "details": "Apply TailwindCSS styling to arrange components in a user-friendly interface.",
+            "status": "done",
+            "testStrategy": ""
+          },
+          {
+            "id": 3,
+            "title": "Create User Input Area",
+            "description": "Develop the text input field for users to send messages.",
+            "dependencies": [],
+            "details": "Use ShadUI components to create an efficient and visually appealing input area.",
+            "status": "done",
+            "testStrategy": ""
+          },
+          {
+            "id": 4,
+            "title": "Implement Mode Toggle",
+            "description": "Add functionality to switch between chat interface modes.",
+            "dependencies": [],
+            "details": "Create a toggle button that switches the UI state between different modes.",
+            "status": "done",
+            "testStrategy": ""
+          },
+          {
+            "id": 5,
+            "title": "Test and Debug UI",
+            "description": "Verify the UI works as expected and debug any issues.",
+            "dependencies": [],
+            "details": "Run the development server, test each component interaction, and ensure all parts of the UI function correctly.",
+            "status": "done",
+            "testStrategy": ""
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Set Up Supabase Local Instance",
+        "description": "Configure a local Supabase instance for development purposes.",
+        "details": "Install Supabase CLI and initialize a new project. Follow the provided documentation to set up a local database with initial migrations.",
+        "testStrategy": "Verify that the Supabase local instance is running by accessing the Supabase dashboard and checking the schema.",
+        "priority": "high",
+        "dependencies": [1],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 5,
+        "title": "Implement Text Chat Interface",
+        "description": "Create a basic text chat interface using OpenAI's GPT-4.1-nano model.",
+        "details": "Integrate the OpenAI API for text generation and implement real-time streaming of responses using NextJS server components and React.",
+        "testStrategy": "Run the development server, enter messages in the chat interface, and verify that AI responses are displayed in real-time.",
+        "priority": "high",
+        "dependencies": [3, 4],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 6,
+        "title": "Implement Image Generation Capability",
+        "description": "Add functionality to switch between text chat and image generation modes.",
+        "details": "Integrate the OpenAI API for image generation and implement a toggle in the UI to switch between text and image modes.",
+        "testStrategy": "Run the development server, toggle to image mode, describe an image, and verify that the generated image is displayed correctly.",
+        "priority": "high",
+        "dependencies": [3],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 7,
+        "title": "Implement Message Storage in Supabase",
+        "description": "Store chat messages in the Supabase database.",
+        "details": "Create tables for storing chat sessions and messages, and implement logic to insert new messages into the database.",
+        "testStrategy": "Run the development server, send a message, and verify that it is stored in the Supabase database by querying the relevant table.",
+        "priority": "high",
+        "dependencies": [5],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 8,
+        "title": "Implement 'New Chat' Functionality",
+        "description": "Add an option to start a fresh conversation without history influencing AI responses.",
+        "details": "Clear conversation history and reset the interface while storing previous chats in Supabase.",
+        "testStrategy": "Run the development server, click 'New Chat', and verify that the interface is reset and previous conversations are stored correctly.",
+        "priority": "high",
+        "dependencies": [5],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 9,
+        "title": "Enhance UI with Improved Styling and Responsiveness",
+        "description": "Improve the user interface with better styling and responsiveness.",
+        "details": "Refine the CSS for the chat interface, ensure it is responsive across different devices, and add animations for a smoother user experience.",
+        "testStrategy": "Run the development server, test the UI on various devices and browsers to ensure it meets the requirements.",
+        "priority": "medium",
+        "dependencies": [3],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 10,
+        "title": "Optimize API Usage and Error Handling",
+        "description": "Improve API usage and add error handling for better user experience.",
+        "details": "Optimize the use of OpenAI APIs, implement proper error handling for rate limits and other issues, and provide feedback to users in case of errors.",
+        "testStrategy": "Run the development server, simulate different scenarios (e.g., rate limit), and verify that appropriate error messages are displayed to the user.",
+        "priority": "medium",
+        "dependencies": [5, 6],
+        "status": "pending",
+        "subtasks": []
+      }
+    ],
+    "metadata": {
+      "created": "2025-07-30T11:58:01.918Z",
+      "updated": "2025-07-30T12:15:20.827Z",
+      "description": "Tasks for master context"
+    }
+  }
+}

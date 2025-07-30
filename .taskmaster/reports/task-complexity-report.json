@@ -1,0 +1,77 @@
+{
+	"meta": {
+		"generatedAt": "2025-07-30T12:11:17.939Z",
+		"tasksAnalyzed": 1,
+		"totalTasks": 10,
+		"analysisCount": 8,
+		"thresholdScore": 5,
+		"projectName": "Taskmaster",
+		"usedResearch": false
+	},
+	"complexityAnalysis": [
+		{
+			"taskId": 2,
+			"taskTitle": "Install Dependencies",
+			"complexityScore": 3,
+			"recommendedSubtasks": 1,
+			"expansionPrompt": "Break down into individual package installations.",
+			"reasoning": "The task involves installing multiple packages, which can be done sequentially."
+		},
+		{
+			"taskId": 3,
+			"taskTitle": "Create Basic UI Layout",
+			"complexityScore": 4,
+			"recommendedSubtasks": 2,
+			"expansionPrompt": "Separate the chat interface into smaller components.",
+			"reasoning": "The task requires designing and implementing multiple UI elements, which can be broken down into smaller subtasks."
+		},
+		{
+			"taskId": 4,
+			"taskTitle": "Set Up Supabase Local Instance",
+			"complexityScore": 3,
+			"recommendedSubtasks": 1,
+			"expansionPrompt": "Document the setup process for future reference.",
+			"reasoning": "The task involves setting up a local instance, which can be documented as a subtask."
+		},
+		{
+			"taskId": 10,
+			"taskTitle": "Optimize API Usage and Error Handling",
+			"complexityScore": 5,
+			"recommendedSubtasks": 2,
+			"expansionPrompt": "Create separate tasks for API optimization and error handling.",
+			"reasoning": "The task involves multiple aspects of improving API usage and error handling, which can be broken down into smaller subtasks."
+		},
+		{
+			"taskId": 9,
+			"taskTitle": "Enhance UI with Improved Styling and Responsiveness",
+			"complexityScore": 4,
+			"recommendedSubtasks": 2,
+			"expansionPrompt": "Focus on specific areas of styling and responsiveness.",
+			"reasoning": "The task requires improving multiple aspects of the UI, which can be broken down into smaller subtasks."
+		},
+		{
+			"taskId": 8,
+			"taskTitle": "Implement 'New Chat' Functionality",
+			"complexityScore": 4,
+			"recommendedSubtasks": 2,
+			"expansionPrompt": "Separate the logic for clearing history and storing previous chats.",
+			"reasoning": "The task involves multiple steps, which can be broken down into smaller subtasks."
+		},
+		{
+			"taskId": 7,
+			"taskTitle": "Implement Message Storage in Supabase",
+			"complexityScore": 4,
+			"recommendedSubtasks": 2,
+			"expansionPrompt": "Create separate tasks for creating tables and implementing logic.",
+			"reasoning": "The task involves multiple steps, which can be broken down into smaller subtasks."
+		},
+		{
+			"taskId": 6,
+			"taskTitle": "Implement Image Generation Capability",
+			"complexityScore": 4,
+			"recommendedSubtasks": 2,
+			"expansionPrompt": "Separate the integration of OpenAI API and UI toggle logic.",
+			"reasoning": "The task involves multiple steps, which can be broken down into smaller subtasks."
+		}
+	]
+}
